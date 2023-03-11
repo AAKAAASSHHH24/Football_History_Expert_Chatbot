@@ -32,5 +32,6 @@ def transcribe(audio):
 
     return chat_transcript
 
-ui = gr.Interface(fn=transcribe, inputs=gr.Audio(source="microphone", type="filepath"), outputs="text").launch()
-ui.launch(share=True)
+ui = gr.Interface(fn=transcribe,title="FOOTBALL HISTORY EXPERT",description= "I AM A FOOTBALL EXPERT, ASK ME ANYTHING!", inputs=gr.Audio(source="microphone", type="filepath"), outputs="text").launch(share=True)
+_, _, public = ui.launch(share=True)
+print(public)
